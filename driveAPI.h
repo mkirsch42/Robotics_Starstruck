@@ -8,12 +8,12 @@
 
 void setL(int drive)
 {
-	motor[driveLeft] = drive * MULT_L;
+	motor[driveSideLeft] = drive * MULT_L;
 }
 
 void setR(int drive)
 {
-	motor[driveRight] = drive * MULT_R;
+	motor[driveSideRight] = drive * MULT_R;
 }
 
 void setLateral(int drive)
