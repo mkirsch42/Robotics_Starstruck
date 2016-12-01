@@ -1,7 +1,7 @@
 #define AUTON_L 0
 #define AUTON_R 1
 
-int Program = 2;
+int Program = 0;
 
 void auton()
 {
