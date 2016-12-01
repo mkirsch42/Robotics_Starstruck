@@ -3,12 +3,19 @@
 
 int Program = 2;
 
+void auton()
+{
+  setBucket(255);
+  setL(255);
+  setR(255);
+}
+
 void autonL()
 {
-
+  auton();
 }
 
 void autonR()
 {
-
+  auton();
 }
