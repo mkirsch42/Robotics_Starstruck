@@ -3,7 +3,7 @@
 #define MULT_R 1
 #define MULT_LAT 255
 #define MULT_SXR 1
-#define MULT_BKT 255
+#define MULT_BKT 1
 #define MULT_FRG 255
 
 void setL(int drive)
@@ -33,5 +33,5 @@ void setBucket(int drive)
 
 void setFiring(int drive)
 {
-	motor[motorFiring] = drive * MULT_FRG;
+	motor[motorFiring] = motor[motorFiring2] = drive * MULT_FRG;
 }

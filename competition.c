@@ -3,6 +3,7 @@
 #pragma config(Sensor, dgtl12, override,       sensorDigitalIn)
 #pragma config(Motor,  port1,           driveSideLeft,     tmotorVex393_HBridge, openLoop, reversed)
 #pragma config(Motor,  port2,           driveLateral,  tmotorVex393_MC29, openLoop)
+#pragma config(Motor,  port3,           motorFiring2,   tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port6,           motorScissor1, tmotorVex393_MC29, openLoop, reversed)
 #pragma config(Motor,  port7,           motorScissor2, tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port8,           motorBucket,   tmotorVex393_MC29, openLoop)
@@ -139,10 +140,11 @@ task usercontrol()
 		setR(vexRT[Ch3]);
 
 		if (vexRT[Btn5U]) {
+			setBucket(255);
+		} else if (vexRT[Btn5D]) {
+			setBucket(-255);
+		} else {
 			setBucket(1);
-		}
-		if (vexRT[Btn5D]) {
-			setBucket(-1);
 		}
 
 		if (vexRT[Btn6U]) {
