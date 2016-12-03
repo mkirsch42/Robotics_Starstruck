@@ -7,7 +7,7 @@
 #pragma config(Motor,  port1,           left2,         tmotorVex393TurboSpeed_HBridge, openLoop)
 #pragma config(Motor,  port2,           left1,         tmotorVex393TurboSpeed_MC29, openLoop, encoderPort, I2C_2)
 #pragma config(Motor,  port3,           right1,        tmotorVex393TurboSpeed_MC29, openLoop, reversed, encoderPort, I2C_1)
-#pragma config(Motor,  port4,            ,             tmotorVex393TurboSpeed_MC29, openLoop)
+#pragma config(Motor,  port4,           lock,          tmotorVex393TurboSpeed_MC29, openLoop)
 #pragma config(Motor,  port5,            ,             tmotorVex393TurboSpeed_MC29, openLoop)
 #pragma config(Motor,  port6,           elevator1,     tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port7,           elevator2,     tmotorVex393_MC29, openLoop, reversed, encoderPort, I2C_3)
@@ -151,6 +151,11 @@ task usercontrol()
 			setE(-ELEVATOR_SPEED);
 		} else {
 			setE(ELEVATOR_REST);
+		}
+		if(vexRT[Btn8U]){
+			motor[lock] = 128;
+		} else if(vexRT[Btn8D]) {
+			motor[lock] = -128;
 		}
 	}
 
