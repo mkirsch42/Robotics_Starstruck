@@ -147,16 +147,16 @@ task usercontrol()
 			setBucket(20);
 		}
 
-		if (vexRT[Btn6U]) {
+		if (vexRT[Btn6U] && !(SensorValue[limitLower] || SensorValue[limitUpper])) {
 			setScissor(255);
-		} else if (vexRT[Btn6D]) {
+		} else if (vexRT[Btn6D] && !(SensorValue[limitLower] || SensorValue[limitUpper])) {
 			setScissor(-255);
 		} else {
-			setScissor(5);
+			setScissor(0);
 	  }
 
 		if (SensorValue[limitLower] || SensorValue[limitUpper]){
-			setScissor(5);
+			setScissor(0);
 		}
 
 		if (vexRT[Btn7U]) {
