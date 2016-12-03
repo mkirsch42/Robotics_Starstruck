@@ -160,13 +160,11 @@ task usercontrol()
 		}
 
 		if (vexRT[Btn7U]) {
-			setFiring(1);
-		}
-		if (vexRT[Btn7R]) {
-			setFiring(0);
-		}
-		if (vexRT[Btn7D]) {
-			setFiring(-1);
+			setFiring(255);
+		} else if (vexRT[Btn7D]) {
+			setFiring(-255);
+		} else {
+		  setFiring(0);
 		}
 
 		if (vexRT[Btn8R]) {

@@ -4,7 +4,7 @@
 #define MULT_LAT 255
 #define MULT_SXR 1
 #define MULT_BKT 1
-#define MULT_FRG 255
+#define MULT_FRG 1
 
 void setL(int drive)
 {
