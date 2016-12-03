@@ -8,7 +8,7 @@ void auton()
   setBucket(-255);
   setL(255);
   setR(255);
-  wait1Msec(1500);
+  wait1Msec(1250);
   setBucket(20);
 }
 
