@@ -144,7 +144,7 @@ task usercontrol()
 		} else if (vexRT[Btn5D]) {
 			setBucket(-255);
 		} else {
-			setBucket(5);
+			setBucket(20);
 		}
 
 		if (vexRT[Btn6U]) {

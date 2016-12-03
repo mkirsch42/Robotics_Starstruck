@@ -5,9 +5,11 @@ int Program = 0;
 
 void auton()
 {
-  setBucket(255);
+  setBucket(-255);
   setL(255);
   setR(255);
+  wait1Msec(1500);
+  setBucket(20);
 }
 
 void autonL()
