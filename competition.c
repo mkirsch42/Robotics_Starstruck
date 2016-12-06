@@ -40,6 +40,7 @@ bool hasBeenSelected = false;
 task lcdManager;
 void pre_auton()
 {
+	resetIme();
 	// Set bStopTasksBetweenModes to false if you want to keep user created tasks running between
 	// Autonomous and Tele-Op modes. You will need to manage all user created tasks if set to false.
 	bStopTasksBetweenModes = true;
@@ -114,7 +115,10 @@ task lcdManager()
 
 task autonomous()
 {
-	lcdShowStatus();
+	//lcdShowStatus();
+	resetIme();
+	autonR();
+	return;
 	// .....................................................................................
 	// Insert user code here.
 	// .....................................................................................

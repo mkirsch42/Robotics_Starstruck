@@ -18,4 +18,5 @@ void setE(int val) {
 
 void resetIme() {
 	SensorValue[imeE] = SensorValue[imeL] = SensorValue[imeR] = 0;
+	nMotorEncoder[imeE] = nMotorEncoder[imeL] = nMotorEncoder[imeR] = 0;
 }
